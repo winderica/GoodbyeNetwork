@@ -7,10 +7,10 @@ resultname='../test/result.txt'
 
 items=("Stop-wait" "GBN" "SR" "TCP")
 
-for j in {3..3}; do
+for j in {0..3}; do
   echo "Checking ${items[j]}"
   echo "================================"
-  for i in {1..1000}; do
+  for i in {1..10}; do
     echo "Round $i"
     ./$appname $j >$resultname 2>&1
     diff $inputname $outputname &&
