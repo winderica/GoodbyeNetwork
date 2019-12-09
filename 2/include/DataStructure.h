@@ -1,7 +1,10 @@
 #ifndef DATA_STRUCTURE_H
 #define DATA_STRUCTURE_H
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <cstring>
+
 using namespace std;
 
 struct Configuration {

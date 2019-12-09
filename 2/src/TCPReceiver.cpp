@@ -78,6 +78,10 @@ void TCPReceiver::receive(const struct Packet &packet) {
                 printLog(generateLog("prevAck", BRIGHT_YELLOW, true), lastAckPacket);
                 udtSend(lastAckPacket); // send packet to network layer
             }
+        } else {
+            printLog(generateLog("prevData", BRIGHT_CYAN, false), packet);
+            printLog(generateLog("prevAck", BRIGHT_YELLOW, true), lastAckPacket);
+            udtSend(lastAckPacket); // send packet to network layer
         }
     } else { // packet is corrupted
         printLog(generateLog("corrupted", RED, false), packet);
